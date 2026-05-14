@@ -6,6 +6,13 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Tell browsers we are a light-themed site only. Prevents Samsung Internet
+   and Chrome Android from auto-inverting the page into a dark theme. */
+:root { color-scheme: light; }
+
+/* Safety net — prevents horizontal scroll on mobile if anything overflows. */
+html, body { overflow-x: hidden; }
+
 :root {
   /* brand */
   --c-blue:        #003399;
@@ -933,12 +940,22 @@ a:hover { color: var(--c-orange); }
    RESPONSIVE
    ============================================ */
 @media (max-width: 980px) {
-  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2,
+  .about .grid-2 { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   .map-wrap { grid-template-columns: 1fr; }
   .contact-inner { grid-template-columns: 1fr; }
   .approach-grid { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
+
+  /* The About illustration's negative bleed makes sense only when there's a
+     two-column structure to bleed against. On single-column mobile, reset
+     it to a normal centred figure. */
+  .about-illustration {
+    margin: clamp(28px, 4vw, 48px) auto 0;
+    width: 100%;
+    max-width: 480px;
+  }
 }
 
 @media (max-width: 720px) {
