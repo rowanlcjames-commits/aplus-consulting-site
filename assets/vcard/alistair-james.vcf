@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:James;Alistair;Robert;;Pr Eng
+FN:Alistair James, Pr Eng
+ORG:APlus Consulting (Pty) Ltd
+TITLE:Director
+EMAIL;TYPE=WORK,INTERNET:ajames.aplus@outlook.com
+TEL;TYPE=CELL,VOICE:+27825585477
+ADR;TYPE=WORK:;;;Cape Town;Western Cape;8005;South Africa
+URL:https://aplusconsulting.co.za
+NOTE:Specialist advisory and review services for tailings\, waste and water resources. Pr Eng No. 890393.
+END:VCARD
