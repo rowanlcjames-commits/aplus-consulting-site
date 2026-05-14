@@ -6,9 +6,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Tell browsers we are a light-themed site only. Prevents Samsung Internet
-   and Chrome Android from auto-inverting the page into a dark theme. */
-:root { color-scheme: light; }
+/* Tell browsers we are a light-themed site only. The "only" keyword is
+   the strictest form — explicitly opts out of dark-mode auto-inversion
+   in Chrome Android, Samsung Internet and Edge mobile. */
+:root { color-scheme: only light; }
 
 /* Safety net — prevents horizontal scroll on mobile if anything overflows. */
 html, body { overflow-x: hidden; }
